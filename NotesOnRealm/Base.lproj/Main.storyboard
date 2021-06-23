@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NFb-nf-lnx">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -17,22 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="103" id="2NE-y7-S2s">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="103" id="2NE-y7-S2s" customClass="NoteCell" customModule="NotesOnRealm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2NE-y7-S2s" id="O2y-CF-82s">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB7-tL-N3m">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB7-tL-N3m">
                                             <rect key="frame" x="20" y="11" width="374" height="30"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psn-9H-ApT">
-                                            <rect key="frame" x="20" y="71" width="374" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psn-9H-ApT">
+                                            <rect key="frame" x="20" y="71.666666666666671" width="374" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -44,17 +44,26 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leadingMargin" id="3Z1-18-LnF"/>
-                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="top" secondItem="O2y-CF-82s" secondAttribute="topMargin" id="6na-pa-yTK"/>
-                                        <constraint firstItem="vXi-JU-2ZF" firstAttribute="top" secondItem="OB7-tL-N3m" secondAttribute="bottom" constant="1" id="EIb-OV-0WD"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="vXi-JU-2ZF" secondAttribute="trailing" id="Kia-bw-SSR"/>
-                                        <constraint firstItem="Psn-9H-ApT" firstAttribute="bottom" secondItem="O2y-CF-82s" secondAttribute="bottomMargin" id="Lbl-wB-J1f"/>
-                                        <constraint firstItem="vXi-JU-2ZF" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leadingMargin" id="NV5-la-68k"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="OB7-tL-N3m" secondAttribute="trailing" id="Oar-jI-Hqk"/>
-                                        <constraint firstItem="Psn-9H-ApT" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leadingMargin" id="ejf-di-qUU"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Psn-9H-ApT" secondAttribute="trailing" id="vqc-wO-SRi"/>
+                                        <constraint firstItem="Psn-9H-ApT" firstAttribute="top" secondItem="vXi-JU-2ZF" secondAttribute="bottom" constant="8.6666666666666856" id="5hL-EN-3se"/>
+                                        <constraint firstItem="vXi-JU-2ZF" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leadingMargin" id="8bm-29-7fK"/>
+                                        <constraint firstItem="vXi-JU-2ZF" firstAttribute="trailing" secondItem="O2y-CF-82s" secondAttribute="trailingMargin" id="CRd-ZA-b3Y"/>
+                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="trailing" secondItem="O2y-CF-82s" secondAttribute="trailingMargin" id="HwB-ch-KIj"/>
+                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leadingMargin" id="JA9-AO-aUS"/>
+                                        <constraint firstAttribute="trailing" secondItem="Psn-9H-ApT" secondAttribute="trailing" constant="20" symbolic="YES" id="JvU-vv-UOJ"/>
+                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leadingMargin" id="KxM-i7-OaX"/>
+                                        <constraint firstItem="vXi-JU-2ZF" firstAttribute="top" secondItem="OB7-tL-N3m" secondAttribute="bottom" constant="1" id="YUf-Jb-gF5"/>
+                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="top" secondItem="O2y-CF-82s" secondAttribute="topMargin" id="fF4-9J-ipb"/>
+                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="trailing" secondItem="O2y-CF-82s" secondAttribute="trailingMargin" id="s4b-Vl-0Li"/>
+                                        <constraint firstAttribute="bottom" secondItem="Psn-9H-ApT" secondAttribute="bottom" constant="11" id="sNG-Q2-5p5"/>
+                                        <constraint firstItem="OB7-tL-N3m" firstAttribute="top" secondItem="O2y-CF-82s" secondAttribute="topMargin" id="u9M-s1-7Rf"/>
+                                        <constraint firstItem="Psn-9H-ApT" firstAttribute="leading" secondItem="O2y-CF-82s" secondAttribute="leading" constant="20" symbolic="YES" id="wLU-7S-cMi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateOfCreationLabel" destination="vXi-JU-2ZF" id="GLa-79-oLT"/>
+                                    <outlet property="noteLabel" destination="Psn-9H-ApT" id="r4S-KV-5oE"/>
+                                    <outlet property="noteNameLabel" destination="OB7-tL-N3m" id="p8m-4z-6zF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

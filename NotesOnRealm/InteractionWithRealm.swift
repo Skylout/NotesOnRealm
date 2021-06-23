@@ -20,4 +20,10 @@ class RealmManager {
     func takeNotesFromEntity ()->[Note]{
         return Array(realm.objects(Note.self))
     }
+    
+    func removeNote (_ note: Note) {
+        try! realm.write({
+            realm.delete(note)
+        })
+    }
 }

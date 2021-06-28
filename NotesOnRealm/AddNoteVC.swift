@@ -29,8 +29,7 @@ class AddNoteVC: UIViewController {
         }
         let createdNote = Note(noteName, note)
         
-        let realmManager = RealmManager()
-        realmManager.saveNote(createdNote)
+        RealmManager.shared.saveNote(createdNote)
         
         self.dismiss(animated: true) {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadNotesTV"), object: nil)

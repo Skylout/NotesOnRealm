@@ -10,7 +10,6 @@ import UIKit
 class NoteMainPageVC: UITableViewController {
 
     var notes: [Note] = []
-    let realmManager = RealmManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,7 @@ class NoteMainPageVC: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        notes = realmManager.takeNotesFromEntity()
+        notes = RealmManager.shared.takeNotesFromEntity()
     }
     
     // MARK: - Table view data source
@@ -45,13 +44,13 @@ class NoteMainPageVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        realmManager.removeNote(notes[indexPath.row])
-        notes = realmManager.takeNotesFromEntity()
+        RealmManager.shared.removeNote(notes[indexPath.row])
+        notes = RealmManager.shared.takeNotesFromEntity()
         self.tableView.reloadData()
     }
     
     @objc func reloadNotesTV () {
-        notes = realmManager.takeNotesFromEntity()
+        notes = RealmManager.shared.takeNotesFromEntity()
         self.tableView.reloadData()
     }
 

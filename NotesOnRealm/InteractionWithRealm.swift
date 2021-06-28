@@ -9,6 +9,8 @@ import Foundation
 import RealmSwift
 
 class RealmManager {
+    static var shared = RealmManager()
+    
     var realm: Realm = try! Realm()
     
     func saveNote (_ createdNote: Note){
